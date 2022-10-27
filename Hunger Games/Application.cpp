@@ -17,7 +17,7 @@ int main()
 	for (int i = 0; i < PlayerCount; i++)
 	{
 		std::cout << "Enter the name for player " << i + 1 << std::endl;
-		std::cin >> PlayerName;
+		std::getline(std::cin, PlayerName);
 		std::cout << std::endl;
 		Players.push_back(new Player(PlayerName));
 	}

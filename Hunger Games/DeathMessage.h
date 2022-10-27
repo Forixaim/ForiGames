@@ -6,6 +6,6 @@ private:
 	std::string Victim{};
 	std::string MessageContent{};
 public:
-	DeathMessage();
-	~DeathMessage();
+	DeathMessage(std::string VictimPlayer);
+	~DeathMessage() override;
 };

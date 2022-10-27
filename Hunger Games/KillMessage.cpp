@@ -42,6 +42,7 @@ KillMessage::KillMessage(std::string KillerName, std::string VictimName)
 		MessageContent = KillerName + " overpowered and killed " + VictimName + ".";
 		break;
 	}
+	std::cout << MessageContent << std::endl;
 }
 
 
