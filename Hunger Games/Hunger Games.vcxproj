@@ -129,14 +129,18 @@
   <ItemGroup>
     <ClInclude Include="DeathMessage.h" />
     <ClInclude Include="Dependencies.h" />
+    <ClInclude Include="KillMessage.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="ShelterMessage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="DeathMessage.cpp" />
+    <ClCompile Include="KillMessage.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ShelterMessage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

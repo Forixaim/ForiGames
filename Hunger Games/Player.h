@@ -9,4 +9,3 @@ public:
 	Player(std::string InputName);
 	~Player();
 };
-

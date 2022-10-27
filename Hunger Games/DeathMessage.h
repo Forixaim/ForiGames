@@ -1,6 +1,6 @@
 #pragma once
 #include "Message.h"
-class DeathMessage
+class DeathMessage : public Message
 {
 private:
 	std::string Victim{};
@@ -9,4 +9,3 @@ public:
 	DeathMessage();
 	~DeathMessage();
 };
-

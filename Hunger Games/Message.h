@@ -1,12 +1,12 @@
 #pragma once
-#include "Dependencies.h"
-//A generic Message Class
+#include <iostream>
+#include <cmath>
+//A Generic Message Abstract Class
 class Message
 {
 private:
 	std::string MessageContent{};
 public:
 	Message();
-	~Message();
+	virtual ~Message() = 0;
 };
-
