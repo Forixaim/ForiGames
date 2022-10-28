@@ -16,3 +16,13 @@ Player::~Player()
 		std::cout << "[DEBUG:] " << Name << " Successfully Deleted\n";
 	}
 }
+
+std::string Player::GetName()
+{
+	return Name;
+}
+
+void Player::Dead()
+{
+	IsDead = true;
+}

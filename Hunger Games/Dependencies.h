@@ -3,6 +3,11 @@
 #include <string>
 #include <rapidjson/rapidjson.h>
 #include <vector>
+#include <random>
+#include <cmath>
+#include <ctime>
+#include <iterator>
 #include "Player.h"
 #include "Message.h"
 #include "DeathMessage.h"
+#include "KillMessage.h"

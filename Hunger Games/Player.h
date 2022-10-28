@@ -10,9 +10,11 @@ private:
 	uint8_t Morale{};
 	uint8_t Knowledge{};
 	uint8_t Hunger = 100;
-	bool IsDead = false;
 	bool IsCareer = false;
 public:
+	bool IsDead = false;
 	Player(std::string InputName);
 	~Player();
+	std::string GetName();
+	void Dead();
 };

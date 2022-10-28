@@ -2,11 +2,13 @@
 
 KillMessage::KillMessage(std::string KillerName, std::string VictimName)
 {
+	std::srand((int)time(0));
+	int RandomKillMessage = rand() % 10;
 	Killer = KillerName;
 	Victim = VictimName;
 	//create 10 random kill messages
-	int RandomNumber = rand() % 10;
-	switch (RandomNumber)
+	
+	switch (RandomKillMessage)
 	{
 	case 0:
 		MessageContent = KillerName + " has decided to suplex " + VictimName + " into the mouth of an active volcano.";
@@ -15,13 +17,13 @@ KillMessage::KillMessage(std::string KillerName, std::string VictimName)
 		MessageContent = KillerName + " has hit " + VictimName + "'s pressure point, killing them instantly.";
 		break;
 	case 2:
-		MessageContent = KillerName + " blasted " + VictimName + "to oblivion with a kamehameha.";
+		MessageContent = KillerName + " blasted " + VictimName + " to oblivion with a kamehameha.";
 		break;
 	case 3:
 		MessageContent = VictimName + " ended up dead because " + KillerName + " was bored.";
 		break;
 	case 4:
-		MessageContent = KillerName + " snuck up and strangled " + VictimName + " in the back, gaining a stealthy takedown medal.";
+		MessageContent = KillerName + " snuck up and strangled " + VictimName + " gaining a stealthy takedown medal.";
 		break;
 	case 5:
 		MessageContent = KillerName + " punched " + VictimName + " into orbit.";
@@ -46,4 +48,7 @@ KillMessage::KillMessage(std::string KillerName, std::string VictimName)
 }
 
 
-KillMessage::~KillMessage() = default;
+KillMessage::~KillMessage()
+{
+
+}
