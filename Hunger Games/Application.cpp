@@ -9,7 +9,7 @@ int main()
 	std::string PlayerName;
 	std::vector<Player*> Players; //One that holds the real players, alive or dead
 	std::vector<Player*> AlivePlayers; //One that holds the players that are alive
-	std::cout << std::endl;
+	std::cout << "Welcome to ForiGames!" << std::endl;
 	while (true)
 	{
 		std::cout << "1. Add Player\n2. Done\n";
@@ -79,8 +79,6 @@ int main()
 			AlivePlayers.erase(AlivePlayers.begin() + RandomNumber);
 			StandingPlayers--;
 		}
-		
-		
 	}
 	for (int i = 0; i < PlayerCount; i++)
 	{

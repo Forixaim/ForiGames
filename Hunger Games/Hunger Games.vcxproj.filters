@@ -56,5 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="license.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="readme.md">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
