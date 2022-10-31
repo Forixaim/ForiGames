@@ -3,7 +3,7 @@
 
 DeathMessage::DeathMessage(std::string VictimName)
 {
-	std::srand((int)time(0));
+	std::srand(static_cast<int>(time(0)));
 	Victim = VictimName;
 	int RandomNumber = rand() % 20;
 	switch (RandomNumber)

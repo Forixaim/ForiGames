@@ -10,4 +10,6 @@
 #include "Player.h"
 #include "Message.h"
 #include "DeathMessage.h"
-#include "KillMessage.h"
+#include "SoloKillMessage.h"
+#include "ForixaimKillMessage.h"
+#include "SoloAmbient.h"

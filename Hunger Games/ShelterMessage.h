@@ -1,6 +1,6 @@
 #pragma once
-#include "Message.h"
-class ShelterMessage : public Message
+#include "AmbientMessage.h"
+class ShelterMessage : public AmbientMessage
 {
 private:
 	std::string Shelter{};

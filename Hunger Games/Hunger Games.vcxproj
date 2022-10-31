@@ -24,6 +24,7 @@
     <ProjectGuid>{8163cab5-c041-451c-951f-2230a6d76c7a}</ProjectGuid>
     <RootNamespace>HungerGames</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ForiGames</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -105,6 +106,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,20 +130,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AmbientMessage.h" />
     <ClInclude Include="DeathMessage.h" />
     <ClInclude Include="Dependencies.h" />
+    <ClInclude Include="ForixaimKillMessage.h" />
     <ClInclude Include="KillMessage.h" />
+    <ClInclude Include="SoloAmbient.h" />
+    <ClInclude Include="SoloKillMessage.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="ShelterMessage.h" />
+    <ClInclude Include="DuoKillMessage.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AmbientMessage.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="DeathMessage.cpp" />
+    <ClCompile Include="ForixaimKillMessage.cpp" />
     <ClCompile Include="KillMessage.cpp" />
+    <ClCompile Include="SoloAmbient.cpp" />
+    <ClCompile Include="SoloKillMessage.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ShelterMessage.cpp" />
+    <ClCompile Include="DuoKillMessage.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="license.md" />
