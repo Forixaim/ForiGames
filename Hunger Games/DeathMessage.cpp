@@ -3,9 +3,13 @@
 
 DeathMessage::DeathMessage(std::string VictimName)
 {
-	std::srand(static_cast<int>(time(0)));
+	std::default_random_engine RandomEngine
+	{
+		RNG()
+	};
+	std::uniform_int_distribution<int> Uniform(0,20);
 	Victim = VictimName;
-	int RandomNumber = rand() % 20;
+	int RandomNumber = Uniform(RandomEngine);
 	switch (RandomNumber)
 	{
 	case 1:
