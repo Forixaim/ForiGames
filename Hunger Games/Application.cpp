@@ -11,6 +11,10 @@ int main()
 	std::string PlayerName;
 	std::vector<Player*> Players; //One that holds the real players, alive or dead
 	std::vector<Player*> AlivePlayers; //One that holds the players that are alive
+	std::random_device RandomDevice; // Random Device for Main Function
+	std::default_random_engine RandomEngine{ RandomDevice() }; //The Random Engine
+	std::uniform_int_distribution<int> ActionInts{ 0,1 }; //The Uniform Distribution for the random number
+
 	while (Replay)
 	{
 		PlayerNumber = 0;
@@ -99,7 +103,7 @@ int main()
 		for (int i = 0; i < Choice; i++)
 		{
 			Player* Winner = Players.at(i);
-			if (!(Winner->IsDead))
+			if (!(Winner->IsDead() == true))
 			{
 				PlayerName = Winner->GetName();
 				break;

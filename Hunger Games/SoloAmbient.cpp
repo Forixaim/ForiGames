@@ -2,11 +2,9 @@
 
 SoloAmbient::SoloAmbient(std::string PlayerName)
 {
-	std::default_random_engine Engine{ Random() };
-	Person = PlayerName;
-	std::vector<std::string> AmbientMessages =
-	{
-		
-	};
+	Person = std::move(PlayerName);
+
+	
+	MessageContent = SoloAmbientMessages.at(UniformDist(RandomEngine));
 	std::cout << MessageContent << std::endl;
 }

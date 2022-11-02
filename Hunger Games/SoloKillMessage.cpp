@@ -3,13 +3,10 @@
 SoloKillMessage::SoloKillMessage(std::string KillerName, std::string VictimName)
 {
 
-	Killer = KillerName;
-	//Name of the Victim
-	Victim = VictimName;
-	//Engine that does the random stuff
-	std::default_random_engine Engine{ Random() };
-	//A list of hard coded kill messages
-	std::vector<std::string> SoloKillMessages =
+	Killer = std::move(KillerName);
+	Victim = std::move(VictimName);
+	//A list of kill messages
+	std::vector<std::string> const SoloKillMessages =
 	{
 		Killer + " has decided to suplex " + Victim + " into the mouth of an active volcano.",
 		Killer + " has hit " + Victim + "'s pressure point, killing them instantly.",
@@ -34,12 +31,8 @@ SoloKillMessage::SoloKillMessage(std::string KillerName, std::string VictimName)
 		Killer + "@ForiGames:~$ sudo pacman -Rnsu " + Victim,
 		Killer + " overpowered and killed " + Victim + "."
 	};
-	//A distrubution that sets the min and the max
-	std::uniform_int_distribution<int> Uniform(0, SoloKillMessages.size());
-	//Random Number
-	int RandomKillMessage = static_cast<int>(Uniform(Engine));
-	//Print the Debug Message
-	std::cout << "[DEBUG:] Random Kill Message Number is: " << RandomKillMessage << std::endl;
-	MessageContent = SoloKillMessages.at(RandomKillMessage);
+	//A uniform distribution that sets the min and max
+	std::uniform_int_distribution<unsigned long> Uniform{ 0, static_cast<unsigned long>(SoloKillMessages.size() - 1) };
+	MessageContent = SoloKillMessages.at(Uniform(RandomEngine));
 	std::cout << MessageContent << std::endl;
 }
