@@ -133,6 +133,7 @@
     <ClInclude Include="AmbientMessage.h" />
     <ClInclude Include="DeathMessage.h" />
     <ClInclude Include="Dependencies.h" />
+    <ClInclude Include="ForixaimAmbient.h" />
     <ClInclude Include="ForixaimKillMessage.h" />
     <ClInclude Include="KillMessage.h" />
     <ClInclude Include="SoloAmbient.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="AmbientMessage.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="DeathMessage.cpp" />
+    <ClCompile Include="ForixaimAmbient.cpp" />
     <ClCompile Include="ForixaimKillMessage.cpp" />
     <ClCompile Include="KillMessage.cpp" />
     <ClCompile Include="SoloAmbient.cpp" />

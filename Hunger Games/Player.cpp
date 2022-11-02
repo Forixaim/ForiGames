@@ -24,5 +24,15 @@ std::string Player::GetName()
 
 void Player::Dead()
 {
-	IsDead = true;
+	ValueDead = true;
+}
+
+bool Player::IsDead()
+{
+	return ValueDead;
+}
+
+unsigned int Player::GetLives()
+{
+	return ExtraLives;
 }

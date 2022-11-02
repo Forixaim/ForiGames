@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cmath>
 #include <random>
+#include <array>
+#include <vector>
 //A Generic Message Abstract Class
 class Message
 {

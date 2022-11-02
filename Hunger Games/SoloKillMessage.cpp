@@ -2,89 +2,44 @@
 
 SoloKillMessage::SoloKillMessage(std::string KillerName, std::string VictimName)
 {
-	std::srand(static_cast<int>(time(0)));
-	int RandomKillMessage = rand() % 22;
+
 	Killer = KillerName;
+	//Name of the Victim
 	Victim = VictimName;
-	//create 10 random kill messages
-	if (Killer == "Forixaim")
+	//Engine that does the random stuff
+	std::default_random_engine Engine{ Random() };
+	//A list of hard coded kill messages
+	std::vector<std::string> SoloKillMessages =
 	{
-		RandomKillMessage = 11;
-	}
-	switch (RandomKillMessage)
-	{
-	case 1:
-		MessageContent = KillerName + " has decided to suplex " + VictimName + " into the mouth of an active volcano.";
-		break;
-	case 2:
-		MessageContent = KillerName + " has hit " + VictimName + "'s pressure point, killing them instantly.";
-		break;
-	case 3:
-		MessageContent = KillerName + " blasted " + VictimName + " to oblivion with a kamehameha.";
-		break;
-	case 4:
-		MessageContent = VictimName + " ended up dead because " + KillerName + " was bored.";
-		break;
-	case 5:
-		MessageContent = KillerName + " snuck up and strangled " + VictimName + " gaining a stealthy takedown medal.";
-		break;
-	case 6:
-		MessageContent = KillerName + " punched " + VictimName + " into orbit.";
-		break;
-	case 7:
-		MessageContent = KillerName + " stomped " + VictimName + "'s brains out, leaving a bloody mess.";
-		break;
-	case 8:
-		MessageContent = KillerName + " sparta kicked " + VictimName + " into the sun.";
-		break;
-	case 9:
-		MessageContent = KillerName + " landed a devastating punch at " + VictimName + "'s heart, stopping it.";
-		break;
-	case 10:
-		MessageContent = KillerName + " screamed so loud that " + VictimName + " died from a stroke.";
-		break;
-	case 11:
-		MessageContent = KillerName + "@ForiGames:~$ sudo rm " + VictimName + " -rf";
-		break;
-	case 12:
-		MessageContent = KillerName + " trips " + VictimName + " into a ravine.";
-		break;
-	case 13:
-		MessageContent = KillerName + " makes a joke so funny " + VictimName + " dies from laughter.";
-		break;
-	case 14:
-		MessageContent = KillerName + " encountered skill issue, but wololo'd and used them to kill " + VictimName + ".";
-		break;
-	case 15:
-		MessageContent = KillerName + " pushed " + VictimName + " off a cliff.";
-		break;
-	case 16:
-		MessageContent = VictimName + " tried to kill " + KillerName + ", but " + KillerName + " had an uno reverse card and killed " + VictimName + " instead.";
-		break;
-	case 17:
-		MessageContent = KillerName + " smashed " + VictimName + "'s skull against The Rock.";
-		break;
-	case 18:
-		MessageContent = KillerName + " game ended " + VictimName + ".";
-		break;
-	case 19:
-		MessageContent = KillerName + " boom bap bop ba da ba boop pow " + VictimName + " ending their career.";
-		break;
-	case 20:
-		MessageContent = KillerName + " superheats " + VictimName + ", turning them into plasma.";
-		break;
-	case 21:
-		MessageContent = KillerName + "@ForiGames:~$ sudo pacman -Rnsu " + VictimName;
-		break;
-	default:
-		MessageContent = KillerName + " overpowered and killed " + VictimName + ".";
-		break;
-	}
+		Killer + " has decided to suplex " + Victim + " into the mouth of an active volcano.",
+		Killer + " has hit " + Victim + "'s pressure point, killing them instantly.",
+		Killer + " blasted " + Victim + " to oblivion with a kamehameha.",
+		Victim + " ended up dead because " + Killer + " was bored.",
+		Killer + " snuck up and strangled " + Victim + " gaining a stealthy takedown medal.",
+		Killer + " punched " + Victim + " into orbit.",
+		Killer + " stomped " + Victim + "'s brains out, leaving a bloody mess.",
+		Killer + " sparta kicked " + Victim + " into the sun.",
+		Killer + " landed a devastating punch at " + Victim + "'s heart, stopping it.",
+		Killer + " screamed so loud that " + Victim + " died from a stroke.",
+		Killer + "@ForiGames:~$ sudo rm " + Victim + " -rf",
+		Killer + " trips " + Victim + " into a ravine.",
+		Killer + " makes a joke so funny " + Victim + " dies from laughter.",
+		Killer + " encountered skill issue, but wololo'd and used them to kill " + Victim + ".",
+		Killer + " pushed " + Victim + " off a cliff.",
+		Victim + " tried to kill " + Killer + ", but " + Killer + " had an uno reverse card and killed " + Victim + " instead.",
+		Killer + " smashed " + Victim + "'s skull against The Rock.",
+		Killer + " game ended " + Victim + ".",
+		Killer + " boom bap bop ba da ba boop pow " + Victim + " ending their career.",
+		Killer + " superheats " + Victim + ", turning them into plasma.",
+		Killer + "@ForiGames:~$ sudo pacman -Rnsu " + Victim,
+		Killer + " overpowered and killed " + Victim + "."
+	};
+	//A distrubution that sets the min and the max
+	std::uniform_int_distribution<int> Uniform(0, SoloKillMessages.size());
+	//Random Number
+	int RandomKillMessage = static_cast<int>(Uniform(Engine));
+	//Print the Debug Message
+	std::cout << "[DEBUG:] Random Kill Message Number is: " << RandomKillMessage << std::endl;
+	MessageContent = SoloKillMessages.at(RandomKillMessage);
 	std::cout << MessageContent << std::endl;
-}
-
-
-SoloKillMessage::~SoloKillMessage()
-{
-
 }

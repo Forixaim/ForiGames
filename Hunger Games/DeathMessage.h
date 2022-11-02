@@ -8,5 +8,5 @@ private:
 	std::random_device RNG;
 public:
 	DeathMessage(std::string VictimPlayer);
-	~DeathMessage() override;
+	~DeathMessage() override = default;
 };

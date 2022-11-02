@@ -4,11 +4,13 @@ class Player
 {
 private:
 	std::string Name{};
-	
+	unsigned int ExtraLives = 0;
+	bool ValueDead = false;
 public:
-	bool IsDead = false;
 	Player(std::string InputName);
 	~Player();
 	std::string GetName();
+	unsigned int GetLives();
+	bool IsDead();
 	void Dead();
 };
