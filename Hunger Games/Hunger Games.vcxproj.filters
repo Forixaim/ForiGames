@@ -87,6 +87,9 @@
     <ClInclude Include="Ambience.h">
       <Filter>Header Files\Dependency Bundles</Filter>
     </ClInclude>
+    <ClInclude Include="CinChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeathMessage.cpp">
@@ -130,6 +133,9 @@
     </ClCompile>
     <ClCompile Include="Weapon.cpp">
       <Filter>Source Files\Generics</Filter>
+    </ClCompile>
+    <ClCompile Include="CinChecker.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

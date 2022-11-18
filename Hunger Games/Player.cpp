@@ -27,12 +27,23 @@ void Player::Dead()
 	ValueDead = true;
 }
 
-bool Player::IsDead()
+bool Player::IsDead() const
 {
 	return ValueDead;
 }
 
-unsigned int Player::GetLives()
+unsigned int Player::GetLives() const
 {
 	return ExtraLives;
 }
+
+unsigned int Player::GetKills() const
+{
+	return Kills;
+}
+
+void Player::AddKill(int Amount)
+{
+	Kills += Amount;
+}
+

@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Ambience.h" />
     <ClInclude Include="AmbientMessage.h" />
+    <ClInclude Include="CinChecker.h" />
     <ClInclude Include="CoreGame.h" />
     <ClInclude Include="DeathMessage.h" />
     <ClInclude Include="Deaths.h" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="AmbientMessage.cpp" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="CinChecker.cpp" />
     <ClCompile Include="DeathMessage.cpp" />
     <ClCompile Include="ForixaimAmbient.cpp" />
     <ClCompile Include="ForixaimKillMessage.cpp" />
