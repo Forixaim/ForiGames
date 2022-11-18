@@ -10,10 +10,5 @@
 //Main Classes that are used in the project
 #include "Player.h"
 #include "Message.h"
-#include "DeathMessage.h"
-#include "SoloKillMessage.h"
-#include "ForixaimKillMessage.h"
 #include "SoloAmbient.h"
-//TO-DO Implement JSON
-#include <rapidjson/rapidjson.h>
-
+#include "Deaths.h"

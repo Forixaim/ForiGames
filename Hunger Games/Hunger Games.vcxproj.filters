@@ -13,87 +13,123 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\DeathMessage">
+      <UniqueIdentifier>{4a6f509f-3d48-4154-a2fd-1fc140e81853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AmbientMessages">
+      <UniqueIdentifier>{53dcfcfb-134a-4e84-872d-296652af6f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Generics">
+      <UniqueIdentifier>{e4e0f7c9-da2b-412a-ac7c-aea974ee9073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DeathMessages">
+      <UniqueIdentifier>{0dee8ae8-07fe-4fab-9aed-590b9d9d32c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AmbientMessages">
+      <UniqueIdentifier>{12789a3e-6dfa-49b1-82d2-337fc9295d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Generics">
+      <UniqueIdentifier>{3194e6ce-fdd4-43dd-8b5e-d00e8c039f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dependency Bundles">
+      <UniqueIdentifier>{2207cb70-f2af-4843-9b89-d36a9064767b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dependencies.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Message.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DuoKillMessage.h">
+      <Filter>Header Files\DeathMessage</Filter>
     </ClInclude>
     <ClInclude Include="DeathMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SoloKillMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ShelterMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AmbientMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DuoKillMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KillMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Weapon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SoloAmbient.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DeathMessage</Filter>
     </ClInclude>
     <ClInclude Include="ForixaimKillMessage.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DeathMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="KillMessage.h">
+      <Filter>Header Files\DeathMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="SoloKillMessage.h">
+      <Filter>Header Files\DeathMessage</Filter>
+    </ClInclude>
+    <ClInclude Include="AmbientMessage.h">
+      <Filter>Header Files\AmbientMessages</Filter>
+    </ClInclude>
+    <ClInclude Include="ShelterMessage.h">
+      <Filter>Header Files\AmbientMessages</Filter>
     </ClInclude>
     <ClInclude Include="ForixaimAmbient.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\AmbientMessages</Filter>
+    </ClInclude>
+    <ClInclude Include="SoloAmbient.h">
+      <Filter>Header Files\AmbientMessages</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Generics</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header Files\Generics</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Header Files\Generics</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Generics</Filter>
+    </ClInclude>
+    <ClInclude Include="Deaths.h">
+      <Filter>Header Files\Dependency Bundles</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreGame.h">
+      <Filter>Header Files\Dependency Bundles</Filter>
+    </ClInclude>
+    <ClInclude Include="Ambience.h">
+      <Filter>Header Files\Dependency Bundles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DeathMessage.cpp">
+      <Filter>Source Files\DeathMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="DuoKillMessage.cpp">
+      <Filter>Source Files\DeathMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="ForixaimKillMessage.cpp">
+      <Filter>Source Files\DeathMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="KillMessage.cpp">
+      <Filter>Source Files\DeathMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="SoloKillMessage.cpp">
+      <Filter>Source Files\DeathMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="AmbientMessage.cpp">
+      <Filter>Source Files\AmbientMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="ForixaimAmbient.cpp">
+      <Filter>Source Files\AmbientMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="ShelterMessage.cpp">
+      <Filter>Source Files\AmbientMessages</Filter>
+    </ClCompile>
+    <ClCompile Include="SoloAmbient.cpp">
+      <Filter>Source Files\AmbientMessages</Filter>
+    </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Message.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Generics</Filter>
     </ClCompile>
-    <ClCompile Include="DeathMessage.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Message.cpp">
+      <Filter>Source Files\Generics</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SoloKillMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShelterMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AmbientMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DuoKillMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KillMessage.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Generics</Filter>
     </ClCompile>
     <ClCompile Include="Weapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SoloAmbient.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ForixaimKillMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ForixaimAmbient.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Generics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

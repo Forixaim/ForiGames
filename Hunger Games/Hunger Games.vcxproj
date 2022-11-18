@@ -130,11 +130,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ambience.h" />
     <ClInclude Include="AmbientMessage.h" />
+    <ClInclude Include="CoreGame.h" />
     <ClInclude Include="DeathMessage.h" />
+    <ClInclude Include="Deaths.h" />
     <ClInclude Include="Dependencies.h" />
     <ClInclude Include="ForixaimAmbient.h" />
     <ClInclude Include="ForixaimKillMessage.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="KillMessage.h" />
     <ClInclude Include="SoloAmbient.h" />
     <ClInclude Include="SoloKillMessage.h" />
@@ -150,6 +154,7 @@
     <ClCompile Include="DeathMessage.cpp" />
     <ClCompile Include="ForixaimAmbient.cpp" />
     <ClCompile Include="ForixaimKillMessage.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="KillMessage.cpp" />
     <ClCompile Include="SoloAmbient.cpp" />
     <ClCompile Include="SoloKillMessage.cpp" />
