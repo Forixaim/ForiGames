@@ -1,17 +1,18 @@
 #pragma once
 #include "KillMessage.h"
+
 class SoloKillMessage : public KillMessage
 {
 private:
 	//Name of the Killer
-	std::string Killer{};
+	Player* KillerP = nullptr;
 	//Name of the Victim
-	std::string Victim{};
+	Player* VictimP = nullptr;
 	//The content of the message
 	std::string MessageContent{};
 public:
 	//Constructor
-	SoloKillMessage(std::string KillerName, std::string VictimName);
+	SoloKillMessage(Player* Killer, Player* Victim);
 	//Destructor
 	~SoloKillMessage() override = default;
 };

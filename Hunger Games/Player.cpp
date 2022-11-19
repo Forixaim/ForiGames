@@ -2,48 +2,55 @@
 
 Player::Player(std::string InputName)
 {
-	Name = InputName;
+	this->Name = InputName;
 }
 
 Player::~Player()
 {
-	if (Name == "Forixaim")
+	if (this->Name == "Forixaim")
 	{
-		std::cout << Name << ", how's Charlemagne, is she well. I heard that she recently had a child.\n";
+		std::cout << this->Name << ", how's Charlemagne, is she well. I heard that she recently had a child.\n";
 	}
 	else
 	{
-		std::cout << "[DEBUG:] " << Name << " Successfully Deleted\n";
+		std::cout << "[DEBUG:] " << this->Name << " Successfully Deleted\n";
 	}
 }
 
 std::string Player::GetName()
 {
-	return Name;
+	return this->Name;
 }
 
-void Player::Dead()
+void Player::KillOrRevive()
 {
-	ValueDead = true;
+	if (this->IsDead())
+	{
+		this->ValueDead = false;
+	}
+	else
+	{
+		this->ValueDead = true;
+	}
 }
 
 bool Player::IsDead() const
 {
-	return ValueDead;
+	return this->ValueDead;
 }
 
 unsigned int Player::GetLives() const
 {
-	return ExtraLives;
+	return this->ExtraLives;
 }
 
 unsigned int Player::GetKills() const
 {
-	return Kills;
+	return this->Kills;
 }
 
-void Player::AddKill(int Amount)
+void Player::AddKill(int Amount = 1)
 {
-	Kills += Amount;
+	this->Kills += Amount;
 }
 

@@ -132,38 +132,46 @@
   <ItemGroup>
     <ClInclude Include="Ambience.h" />
     <ClInclude Include="AmbientMessage.h" />
+    <ClInclude Include="Bladed.h" />
     <ClInclude Include="CinChecker.h" />
     <ClInclude Include="CoreGame.h" />
     <ClInclude Include="DeathMessage.h" />
     <ClInclude Include="Deaths.h" />
     <ClInclude Include="Dependencies.h" />
+    <ClInclude Include="Elements.h" />
     <ClInclude Include="ForixaimAmbient.h" />
     <ClInclude Include="ForixaimKillMessage.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="KillMessage.h" />
+    <ClInclude Include="MeleeWeapon.h" />
     <ClInclude Include="SoloAmbient.h" />
     <ClInclude Include="SoloKillMessage.h" />
     <ClInclude Include="Message.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="ShelterMessage.h" />
     <ClInclude Include="DuoKillMessage.h" />
+    <ClInclude Include="Sword.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AmbientMessage.cpp" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Bladed.cpp" />
     <ClCompile Include="CinChecker.cpp" />
     <ClCompile Include="DeathMessage.cpp" />
+    <ClCompile Include="Elements.cpp" />
     <ClCompile Include="ForixaimAmbient.cpp" />
     <ClCompile Include="ForixaimKillMessage.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="KillMessage.cpp" />
+    <ClCompile Include="MeleeWeapon.cpp" />
     <ClCompile Include="SoloAmbient.cpp" />
     <ClCompile Include="SoloKillMessage.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ShelterMessage.cpp" />
     <ClCompile Include="DuoKillMessage.cpp" />
+    <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>

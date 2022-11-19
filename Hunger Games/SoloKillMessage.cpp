@@ -1,38 +1,41 @@
 #include "SoloKillMessage.h"
 
-SoloKillMessage::SoloKillMessage(std::string KillerName, std::string VictimName)
+SoloKillMessage::SoloKillMessage(Player* Killer, Player* Victim)
 {
 
-	Killer = std::move(KillerName);
-	Victim = std::move(VictimName);
+	this->KillerP = std::move(Killer);
+	this->VictimP = std::move(Victim);
+	std::string KillerName = this->KillerP->GetName();
+	std::string VictimName = this->VictimP->GetName();
 	//A list of kill messages
 	std::vector<std::string> const SoloKillMessages =
 	{
-		Killer + " has decided to suplex " + Victim + " into the mouth of an active volcano.",
-		Killer + " has hit " + Victim + "'s pressure point, killing them instantly.",
-		Killer + " blasted " + Victim + " to oblivion with a kamehameha.",
-		Victim + " ended up dead because " + Killer + " was bored.",
-		Killer + " snuck up and strangled " + Victim + " gaining a stealthy takedown medal.",
-		Killer + " punched " + Victim + " into orbit.",
-		Killer + " stomped " + Victim + "'s brains out, leaving a bloody mess.",
-		Killer + " sparta kicked " + Victim + " into the sun.",
-		Killer + " landed a devastating punch at " + Victim + "'s heart, stopping it.",
-		Killer + " screamed so loud that " + Victim + " died from a stroke.",
-		Killer + "@ForiGames:~$ sudo rm " + Victim + " -rf",
-		Killer + " trips " + Victim + " into a ravine.",
-		Killer + " makes a joke so funny " + Victim + " dies from laughter.",
-		Killer + " encountered skill issue, but wololo'd and used them to kill " + Victim + ".",
-		Killer + " pushed " + Victim + " off a cliff.",
-		Victim + " tried to kill " + Killer + ", but " + Killer + " had an uno reverse card and killed " + Victim + " instead.",
-		Killer + " smashed " + Victim + "'s skull against The Rock.",
-		Killer + " game ended " + Victim + ".",
-		Killer + " boom bap bop ba da ba boop pow " + Victim + " ending their career.",
-		Killer + " superheats " + Victim + ", turning them into plasma.",
-		Killer + "@ForiGames:~$ sudo pacman -Rnsu " + Victim,
-		Killer + " overpowered and killed " + Victim + "."
+		KillerName + " has decided to suplex " + VictimName + " into the mouth of an active volcano.",
+		KillerName + " has hit " + VictimName + "'s pressure point, killing them instantly.",
+		KillerName + " blasted " + VictimName + " to oblivion with a kamehameha.",
+		VictimName + " ended up dead because " + KillerName + " was bored.",
+		KillerName + " snuck up and strangled " + VictimName + " gaining a stealthy takedown medal.",
+		KillerName + " punched " + VictimName + " into orbit.",
+		KillerName + " stomped " + VictimName + "'s brains out, leaving a bloody mess.",
+		KillerName + " sparta kicked " + VictimName + " into the sun.",
+		KillerName + " landed a devastating punch at " + VictimName + "'s heart, stopping it.",
+		KillerName + " screamed so loud that " + VictimName + " died from a stroke.",
+		KillerName + "@ForiGames:~$ sudo rm " + VictimName + " -rf",
+		KillerName + " trips " + VictimName + " into a ravine.",
+		KillerName + " makes a joke so funny " + VictimName + " dies from laughter.",
+		KillerName + " encountered skill issue, but wololo'd and used them to kill " + VictimName + ".",
+		KillerName + " pushed " + VictimName + " off a cliff.",
+		VictimName + " tried to kill " + KillerName + ", but " + KillerName + " had an uno reverse card and killed " + VictimName + " instead.",
+		KillerName + " smashed " + VictimName + "'s skull against The Rock.",
+		KillerName + " game ended " + VictimName + ".",
+		KillerName + " boom bap bop ba da ba boop pow " + VictimName + " ending their career.",
+		KillerName + " superheats " + VictimName + ", turning them into plasma.",
+		KillerName + "@ForiGames:~$ sudo pacman -Rnsu " + VictimName,
+		KillerName + " overpowered and killed " + VictimName + "."
 	};
 	//A uniform distribution that sets the min and max
 	std::uniform_int_distribution<unsigned long> Uniform{ 0, static_cast<unsigned long>(SoloKillMessages.size() - 1) };
 	MessageContent = SoloKillMessages.at(Uniform(RandomEngine));
 	std::cout << MessageContent << std::endl;
+	this->VictimP->KillOrRevive();
 }

@@ -2,9 +2,8 @@
 
 Game::Game()
 {
-	
 	std::cout << "Initial Setup.." << std::endl;
-	std::cout << "Would you like to enter a custom number of winners? (y/n)" << std::endl;
+	std::cout << "Would you like to enter a custom number of winners? (y/n): ";
 	YesNoChoice = CinChecker::CheckCinChar();
 	if (YesNoChoice == 'y')
 	{
@@ -15,6 +14,23 @@ Game::Game()
 	{
 		Winners = 1;
 	}
+	std::cout << "Welcome to ForiGames!";
+	while (LoopStoppers.at(0) == false)
+	{
+		std::cout << MenuText << std::endl;
+		IntChoice.at(0) = CinChecker::CheckCinInt();
+		std::cout.clear();
+		switch (IntChoice.at(0))
+		{
+		case 1:
+			std::string Name;
+			std::cin >> Name;
+
+			AddPlayer(Name);
+
+		}
+	}
+	
 }
 
 Game::~Game()
@@ -79,22 +95,45 @@ void Game::RemoveAlivePlayer(Player* Player)
 	}
 }
 
+void Game::ResetAlivePlayers()
+{
+	AlivePlayers.erase(AlivePlayers.begin(), AlivePlayers.end());
+}
+
 void Game::SoloKillEvent(Player* Killer, Player* Victim)
 {
-	//Remove the victim from the alive players
-	RemoveAlivePlayer(Victim);
+	auto SoloKill = std::make_unique<SoloKillMessage>(Killer, Victim);
 	//Add a kill to the killer
-	Killer->AddKill(1);
+	Killer->AddKill();
 }
 
 void Game::InvokeKillEvent()
 {
+	
 	//Randomly selects a victim from the AlivePlayers vector
+	std::uniform_int_distribution<int> UniformNumber(1, 6);
+	int VictimCount = UniformNumber(RandomEngine);
+	for (int Index = 0; Index < UniformNumber(RandomEngine); Index++)
+	{
+		std::uniform_int_distribution<int> UniformDist(0, AlivePlayers.size() - 1);
+		int VictimIndex = UniformDist(RandomEngine);
+		Player* Victim = AlivePlayers.at(VictimIndex);
+		RemoveAlivePlayer(Victim);
+		Victims.push_back(Victim);
+	}
+	std::copy(AlivePlayers.begin(), AlivePlayers.end(), std::back_inserter(PotentialKillers));
+	std::uniform_int_distribution<int> UniformKiller(1, 3);
+	int KillerCount = UniformKiller(RandomEngine);
 	std::uniform_int_distribution<int> UniformDist(0, AlivePlayers.size() - 1);
-	int VictimIndex = UniformDist(RandomEngine);
-	Player* Victim = AlivePlayers.at(VictimIndex);
 	int KillerIndex = UniformDist(RandomEngine);
-
-
+	Player* Killer = AlivePlayers.at(KillerIndex);
+	
 }
 
+void Game::ClearCLI(char Fill = ' ')
+{
+	COORD TopLeft = { 0,0 };
+	CONSOLE_SCREEN_BUFFER_INFO Information;
+	HANDLE Console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+}
